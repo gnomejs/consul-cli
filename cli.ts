@@ -4,9 +4,13 @@ import { pathFinder } from "@gnome/exec/path-finder";
 pathFinder.set("consul", {
     name: "consul",
     windows: [
-        "${ALLUSERSPROFILE:-C:\\ProgramData}\\consullatey\\bin\\consul.exe",
-        "${ConsullateyInstall}\\bin\\consul.exe",
+        "${ALLUSERSPROFILE:-C:\\ProgramData}\\chocolatey\\bin\\consul.exe",
+        "${ChocolateyInstall}\\bin\\consul.exe",
     ],
+    linux: [
+        "/usr/bin/consul",
+        "/usr/local/bin/consul"
+    ]
 });
 
 /**
